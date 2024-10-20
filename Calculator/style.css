@@ -1,0 +1,122 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.calculator {
+    background: linear-gradient(135deg, #1c1c1c, #222);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    outline: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+/* Button Styling */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background: #222;
+    color: white;
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+/* Button Hover Effects */
+button:hover {
+    background: linear-gradient(145deg, #444, #333);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.9);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Unique Button Styles */
+button.clear {
+    background: #e74c3c;
+}
+
+button.del {
+    background: #f39c12;
+}
+
+button.operator {
+    background: #3498db;
+}
+
+button.equal {
+    background: #2ecc71;
+    grid-column: span 2;
+}
+
+button.number {
+    background: #34495e;
+}
+
+button.decimal {
+    background: #16a085;
+}
+
+/* Glowing Effect for the input and button clicks */
+textarea:focus {
+    box-shadow: 0 0 15px #2ecc71;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0px 0px 20px #3498db;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    button {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    textarea {
+        font-size: 1.6rem;
+    }
+}
