@@ -120,3 +120,30 @@ button:focus {
         font-size: 1.6rem;
     }
 }
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column; /* Ensures content (including footer) stacks vertically */
+}
+
+#footer {
+    width: 100%;
+    text-align: center; /* Centers the text horizontally */
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed; /* Fixes the footer at the bottom of the page */
+    bottom: 0; /* Positions it at the bottom */
+    left: 0; /* Ensures it spans the full width */
+}
+
+footer p {
+    margin: 0; /* Remove default margin to prevent extra space */
+}
